@@ -1,0 +1,227 @@
+/* =================================== TYPOS =========================================== */
+
+@font-face { font-family: "PoppinsBold"; src: url("../fonts/Poppins-Bold.ttf") format("truetype"); }
+@font-face { font-family: "PoppinsLight"; src: url("../fonts/Poppins-Light.ttf") format("truetype"); }
+@font-face { font-family: "PoppinsExtraLightItalic"; src: url("../fonts/Poppins-ExtraLightItalic.ttf") format("truetype"); }
+
+
+/* =================================== VARIABLES =========================================== */
+
+:root {
+	--background: #005;
+	--primary: #88D5BF;
+	--secondary: #5D6BF8;
+	--third: #e27fcb;
+}
+
+/* =================================== ALL =========================================== */
+
+* {
+
+
+	padding: 0;
+	margin: 0 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* =================================== BODY =========================================== */
+
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #23272A;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before, body::after {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    content: "";
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
+    background-image: linear-gradient(45deg, #ab49de, #5b41f2);
+    animation: vawe 5s linear infinite;
+}
+body::before { top: -10%; right: -10%; }
+body::after { bottom: -10%; left: -15%; }
+
+
+/* =================================== BOUTONS =========================================== */
+
+button,
+input[type="text"] {
+
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    font-family: "PoppinsBold";
+    outline: none;
+    
+}
+
+input[type="text"] {
+
+    color: #0C0A96;
+    text-align: end;
+
+
+}
+
+button {
+
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* =================================== TEXTE/TITRES =========================================== */
+
+body > div {
+
+    margin-right: 10vw;
+    margin-left: -5vw;
+    height: 50vh;
+    width: 30vw;
+}
+
+h1 {
+
+    color: whitesmoke;
+    font-family: "PoppinsLight";
+    font-size: 4vw;
+}
+
+h2 {
+
+    color: rgba(245, 245, 245, 0.568);
+    font-family: "PoppinsExtraLightItalic";
+}
+
+
+/* =================================== CALCULATRICE =========================================== */
+
+table {
+
+    transform: scale(2);
+    background: rgb(41, 40, 40);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.5);
+}
+
+td {
+
+    text-align: center;
+    padding: 5px 0.5vw;
+    border-radius: 20px;
+    transition: 0.3s linear;
+    width: 10px;
+}
+
+td:not(.up-space):hover {
+
+    box-shadow: inset 0px 0px 7px 1px rgba(226, 226, 226, 0.5), 0px 0px 7px 1px rgba(226, 226, 226, 0.2);
+    cursor: pointer;
+}
+
+td[colspan="4"]:not(.up-space) {
+
+    background: #ADD8E6;
+    border: 1px solid #8b8b8b75;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.3);
+}
+
+
+/* =================================== FORMES =========================================== */
+
+body .forme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+body .forme span {
+    position: absolute;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #ab49de, #5b41f2);
+    border-radius: 38% 62% 55% 45% / 32% 53% 47% 68%;
+    animation: vawe 7s linear infinite;
+}
+body .forme span:nth-child(1) {
+    top: 10%;
+    left: calc(100% - 360px);
+    width: 75px;
+    height: 75px;
+}
+body .forme span:nth-child(2) {
+    top: 15px;
+    left: 180px;
+    width: 50px;
+    height: 50px;
+    border-radius: 38% 62% 33% 67% / 60% 53% 47% 40%;
+    transform: rotate(90deg);
+}
+body .forme span:nth-child(3) {
+    right: 180px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
+}
+body .forme span:nth-child(4) {
+    bottom: 50px;
+    left: 240px;
+    width: 20px;
+    height: 20px;
+    border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
+}
+body .forme span:nth-child(5) {
+    right: 280px;
+    bottom: 80px;
+    width: 25px;
+    height: 25px;
+    border-radius: 38% 62% 55% 45% / 52% 53% 47% 48%;
+}
+body .forme span:nth-child(6) {
+    top: 6%;
+    left: calc(100% - 400px);
+    width: 25px;
+    height: 25px;
+}
+
+
+/* =================================== ANIMATIONS =========================================== */
+
+@keyframes vawe {
+    20% {
+        border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+    }
+    40% {
+        border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+    }
+    60% {
+        border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+    }
+    80% {
+        border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+    }
+}
+  
+
+
+
+
+
+
+
